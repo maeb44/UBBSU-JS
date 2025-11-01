@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<meta charset="UTF-8">
+	<meta 
+		name="viewport" 
+		content="width=device-width, 
+		initial-scale=1.0"
+	>
+	<title>
+		Lab
+	</title>
+</head>
+<body>
+	<div class="lab1">
+		<form 
+			class="lab1__form"  
+			method="get" 
+			action="for"
+			onsubmit="return validateForm()">
+			<div class="lab1__div">
+				<label 
+					for="form-inp-name" 
+					class="lab1__form_name">Имя</label>
+				<input 
+					id="form-inp-name"
+					name="form-inp-name"
+					type="text" 
+					required >
+			</div>
+			<div class="lab1__div">
+				<label 
+					for="form-inp-phone" 
+					class="lab1__form_sec">Телефон</label>
+				<input 
+					id="form-inp-phone" 
+					name="phone" 
+					type="tel" 
+					class="inp-sec"
+					placeholder="+375">
+			</div>
+			<div class="lab1__div">
+				<label 
+					for="form-inp-email" 
+					class="lab1__form_sec">Email</label>
+				<input 
+					id="form-inp-email"
+					name="email"
+					class="inp-sec" 
+					type="email"  >
+			</div>
+			<div class="lab1__div">
+				<button 
+					type="submit" 
+					class="lab1__btn" 
+					id="lab1__btn">Отправить</button>
+			</div>
+		</form>
+	
+</div>
+<div class="lab2">
+	<div class="lab2__big-div" id="big"></div>
+	<div class="lab2__little-div-gr" id="green"></div>
+	<div class="lab2__little-div-red" id="red"></div>
+	<div class="lab2__little-div-black" id="black"></div>
+</div>
+
+<div class="lab3">
+	<div>
+	<input type="text" id="calc" readonly>
+	</div>
+	<div class="grid-container">
+		<button class="number">1</button>
+		<button class="number">2</button>
+		<button class="number">3</button>
+		<button class="operand">+</button>
+		<button class="number">4</button>
+		<button class="number">5</button>
+		<button class="number">6</button>
+		<button class="operand">-</button>
+		<button class="number">7</button>
+		<button class="number">8</button>
+		<button class="number">9</button>
+		<button class="operand">/</button>
+		<button class="number" style="grid-column: 1/span 3;">0</button>
+		<button class="operand">*</button>
+		<button class="result">=</button>
+		<button class="reset">C</button>
+		
+
+	</div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>

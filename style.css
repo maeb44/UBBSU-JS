@@ -1,0 +1,57 @@
+html{
+	box-sizing: border-box;
+}
+.lab1,
+ .lab2,
+.lab3{
+	margin-bottom: 50px;
+}
+.lab1__div{
+	margin: 20px;
+}
+
+.lab2{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 200px 100px;
+}
+	.lab2__big-div{
+		background: aqua;
+		grid-column-start:1;
+		grid-column-end:4;
+	}
+	.lab2__little-div-gr{
+		background: greenyellow;
+	}
+	.lab2__little-div-red{
+		background: red;
+	}
+	.lab2__little-div-black{
+		background: black;
+	}
+
+.grid-container{
+	display: grid;
+	grid-template-columns: repeat(4,40px);
+}
+	.number,
+	.operand,
+	.result,
+	.reset{
+		display: grid;
+		margin: 5px;
+		padding: 5px;
+		border: 1px solid black;
+		place-items: center;
+	}
+.operand{
+	grid-column: 4;
+}
+	.result{
+		grid-column: 1 / span 3;
+		grid-row: 5;
+	}
+	.reset{
+		grid-column: 4;
+
+	}
