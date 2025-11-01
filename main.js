@@ -30,6 +30,7 @@ function setColour(){
 }
 
 function calc(){
+	let regex=/[0-9]/;
 	let input = document.getElementById('calc');
 	document.addEventListener('click',(event)=>{
 		if(event.target.classList.contains('number')){
@@ -37,7 +38,7 @@ function calc(){
 			console.log(input.value)
 		}
 		if(event.target.classList.contains('operand')){
-				if(input.value[input.value.length-1]!=event.target.textContent){
+				if(regex.test(input.value[input.value.length-1])){
 					input.value+=event.target.textContent
 			}
 		}
