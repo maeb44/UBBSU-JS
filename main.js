@@ -31,15 +31,19 @@ function setColour(){
 
 function calc(){
 	let regex=/[0-9]/;
+	let regex1=/[\- \+ \* \/]/;
 	let input = document.getElementById('calc');
 	document.addEventListener('click',(event)=>{
 		if(event.target.classList.contains('number')){
 			input.value+=event.target.textContent
-			console.log(input.value)
+			
 		}
 		if(event.target.classList.contains('operand')){
-				if(regex.test(input.value[input.value.length-1])){
+			if(regex.test(input.value[input.value.length-1])){
 					input.value+=event.target.textContent
+			}
+			if(regex1.test(input.value[input.value.length-1])){
+				input.value=input.value.slice(0,-1)+event.target.textContent;
 			}
 		}
 		if(event.target.classList.contains('result')){
